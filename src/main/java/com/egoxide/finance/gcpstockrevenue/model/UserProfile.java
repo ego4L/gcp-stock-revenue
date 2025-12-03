@@ -2,8 +2,8 @@ package com.egoxide.finance.gcpstockrevenue.model;
 
 import com.google.cloud.firestore.annotation.DocumentId;
 
+import java.time.Instant;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 public record UserProfile(
@@ -11,7 +11,7 @@ public record UserProfile(
         String uid,
         String email,
         String name,
-        Date createdAt,
+        Instant createdAt,
         List<String> roles) {
     public UserProfile {
         if (roles == null) {
